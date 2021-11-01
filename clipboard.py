@@ -10,7 +10,7 @@ if todo == 'save clipboard data to csv':
     df = st.text_area('paste your data here')
     if st.button('read text area & save csv'):
         st.success('button pressed')
-        df = pd.read_csv(StringIO(df))
+        df = pd.read_csv(StringIO(df), delimiter=";")
         st.write(df)
         now = datetime.now()
         file_name = f'{now:%Y-%m-%d %H-%M-%S} clipboard data.csv'
