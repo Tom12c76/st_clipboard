@@ -5,7 +5,7 @@ import glob
 
 todo = st.radio('what do you want to do', ['save clipboard data to csv', 'download csv files'])
 
-if todo == 'save clipboard to csv':
+if todo == 'save clipboard data to csv':
     if st.button('read clipboard & save csv'):
         try:
             df = pd.read_clipboard()
